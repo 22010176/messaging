@@ -11,6 +11,6 @@ export default function () {
 
 
   return (
-    <h1>Chat</h1>
+    <h1>Chat app</h1>
   )
 }
