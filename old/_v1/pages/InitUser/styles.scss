@@ -1,0 +1,13 @@
+#init-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+
+  .create-user-form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
+  }
+}
