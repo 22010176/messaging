@@ -1,0 +1,36 @@
+:root {
+  --main-bg-color: rgb(46, 46, 46);
+  --app-main-bg: rgb(21, 21, 21);
+}
+
+.chat-app {
+  display: grid;
+  background-color: var(--main-bg-color);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  grid-template-rows: 4fr 100px;
+  align-items: center;
+  gap: 20px;
+}
+
+.container {
+  background-color: var(--app-main-bg);
+  margin: auto;
+  min-width: 600px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.message-box {
+  max-height: 100%;
+}
+
+.message-form {
+  // padding: 10px;
+  max-height: 100%;
+}
+
+.form-wrapper {
+  max-height: 100%;
+}
