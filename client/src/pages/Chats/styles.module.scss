@@ -47,14 +47,48 @@
   overflow: hidden;
 }
 
-.user-avatar {
-  width: 100%;
-  overflow: hidden;
+
+.form-wrapper {
+  height: 100%;
+  padding: 10px;
 }
 
-.user-avatar>img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+.input-form {
+  height: inherit;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.form-section {
+  align-self: stretch;
+}
+
+.message-input {
+  outline: none;
+  min-width: 400px;
+  height: 100%;
+  border: none;
+  align-self: stretch;
+  padding: 5px;
+  resize: none;
+  border-radius: 10px;
+  flex-grow: 2;
+}
+
+.message-input:focus {
+  outline: none;
+  border: none;
+}
+
+.btn {
+  // background-color: none;
+  border: 2px white solid;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  // background-color: none;
+  background: none;
+  // align-self: stretch;
 }

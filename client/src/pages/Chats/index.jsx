@@ -5,13 +5,18 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './styles.module.scss'
 import { v4 } from 'uuid';
 
+import Message from './components/Message';
+
+const inputWidth = 30;
+
 export default function App() {
+
   const [name, setName] = useState("")
-  const [message, setMessage] = useState("Hello")
+  const [message, setMessage] = useState("")
 
   useEffect(function () {
     const _name = localStorage.getItem('user')
-    // console.log(_name)
+
     if (_name) setName(_name)
     else {
       setName(v4())
@@ -19,29 +24,28 @@ export default function App() {
     }
   }, [])
 
+  function _onSubmit(e) {
+    e.preventDefault()
+    console.log(message)
+  }
+
 
   return (
     <div className={[styles['chat-app']].join(' ')}>
       <div className={[styles['message-box'], styles.container].join(' ')}>
-        <div className={styles.message}>
-          <div className={styles['user-message']}>
-            {name}
-          </div>
-          <div className={styles['messaage']}>
-            {message}
-          </div>
-        </div>
-        <div className={styles.message}>
-          <div className={styles['user-message']}>
-            {name}
-          </div>
-          <div className={styles['messaage']}>
-            {message}
-          </div>
-        </div>
+        <Message name={name} messaage={"asfdasfasfd"} />
+        <Message name={name} messaage={"asfdasfasfd"} />
+        <Message name={name} messaage={"asfdasfasfd"} />
+        <Message name={name} messaage={"asfdasfasfd"} />
+
       </div>
       <div className={[styles['message-form'], styles.container].join(' ')}>
-        <div className={styles['form-wrapper']}></div>
+        <div className={styles['form-wrapper']}>
+          <form className={styles['input-form']} onSubmit={_onSubmit}>
+            <textarea value={message} onChange={e => setMessage(e.target.value || "")} placeholder='Your message...' className={styles['message-input']} cols={inputWidth} rows={Math.ceil(message.length / 30) + message.split('\n').length} />
+            <button className={styles.btn} type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
   );
