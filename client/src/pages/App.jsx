@@ -7,7 +7,6 @@ const appContext = createContext()
 
 function App() {
   useEffect(function () {
-    fetch('./api').then(a => a.json()).then(console.log)
   }, [])
   return (
 
