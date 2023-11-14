@@ -9,9 +9,7 @@ io.on('connection', socket => {
 
   socket.on("message", function (data) {
     message.push(data)
-
     socket.emit("messages", message)
     socket.broadcast.emit("messages", message)
-
   })
 })

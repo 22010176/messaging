@@ -15,6 +15,7 @@ app.use(express.static(path.resolve(__dirname, '../client/build')))
 
 module.exports = { io, server, PORT }
 
+app.use('/account', require('./Route/account'))
 app.use('/api', require('./Route'))
 
 
