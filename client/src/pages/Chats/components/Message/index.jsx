@@ -1,3 +1,5 @@
+import 'reset-css'
+
 import styles from './styles.module.scss'
 
 export default function Message({ name, message, owner, maxLength = 50 }) {

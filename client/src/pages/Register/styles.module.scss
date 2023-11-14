@@ -1,0 +1,26 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.form-container {
+  width: 70%;
+  // height: 100%;
+  border: 1px white solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-sect {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

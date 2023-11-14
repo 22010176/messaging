@@ -9,13 +9,8 @@ import socket from '../../server'
 import Message from './components/Message';
 import Button from './components/button';
 
-const inputWidth = 30;
+const inputWidth = 3;
 let messagelen = 100;
-
-function MessScoll(e) {
-  const objDiv = e.target
-  objDiv.scrollTop = objDiv.scrollHeight;
-}
 
 export default function App() {
 
@@ -37,11 +32,8 @@ export default function App() {
     socket.connect()
     socket.on("messages", setMessages)
 
-    const elem = document.querySelector("._message-container")
-    elem.addEventListener("scroll", MessScoll)
 
     return () => {
-      elem.removeEventListener("scroll", MessScoll)
       socket.off("message")
       socket.off("messages")
       socket.disconnect()

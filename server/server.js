@@ -12,10 +12,10 @@ const io = require('socket.io')(server)
 
 app.use(require('cors')({ origin: 'http://127.0.0.1:3001', credentials: true }))
 app.use(express.static(path.resolve(__dirname, '../client/build')))
-
+app.use(express.urlencoded({ extended: true }))
 module.exports = { io, server, PORT }
 
-app.use('/account', require('./Route/account'))
 app.use('/api', require('./Route'))
+app.use('/account', require('./Route/account'))
 
 

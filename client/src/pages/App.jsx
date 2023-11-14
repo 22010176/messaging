@@ -15,7 +15,12 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <div className={styles.navbar}></div>
+      <div className={styles.navbar}>
+        <a href="/">Home</a>
+        <a href="login">Login</a>
+        <a href="chats">Chat</a>
+        <a href="register">Register</a>
+      </div>
       <appContext.Provider value={"hello"}>
         <BrowserRouter>
           <Routes>

@@ -1,0 +1,22 @@
+.form-sect {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+$input-border-width: 2px;
+
+.input-text {
+  width: 60%;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: none;
+  border: $input-border-width solid white;
+  border-radius: 5px;
+}
+
+.input-text:focus {
+  outline: none;
+  border: $input-border-width rgb(87, 87, 87) solid;
+}
