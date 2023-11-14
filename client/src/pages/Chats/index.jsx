@@ -12,12 +12,11 @@ import Button from './components/button';
 const inputWidth = 30;
 let messagelen = 100;
 
-
-
 function MessScoll(e) {
   const objDiv = e.target
   objDiv.scrollTop = objDiv.scrollHeight;
 }
+
 export default function App() {
 
   const [name, setName] = useState("")
