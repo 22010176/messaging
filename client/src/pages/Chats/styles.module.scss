@@ -6,7 +6,7 @@
 .chat-app {
   display: grid;
   background-color: var(--main-bg-color);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
   grid-template-rows: 4fr 100px;

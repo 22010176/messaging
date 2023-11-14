@@ -1,6 +1,10 @@
 import { createContext, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Chats from './Chats';
+import Login from './Login';
+import Register from './Register';
+
 import styles from './App.module.scss';
 
 const appContext = createContext()
@@ -8,11 +12,21 @@ const appContext = createContext()
 function App() {
   useEffect(function () {
   }, [])
-  return (
 
+  return (
     <div className={styles.App}>
+      <div className={styles.navbar}></div>
       <appContext.Provider value={"hello"}>
-        <Chats />
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' >
+              <Route index element={<h1>Hello</h1>} />
+              <Route path='chats' element={<Chats />} />
+              <Route path='login' element={<Login />} />
+              <Route path='register' element={<Register />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </appContext.Provider>
     </div>
   );
